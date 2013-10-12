@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    
   </head>
   <body>
       <div id="header">
@@ -51,25 +51,37 @@
 	    <tr>
 	      <th> Host </th>
 	      <th> Capacity </th>
+	      <th> Rating </th>
 	    </tr>
 	    <tr>
 	      <td> <a href="http://iceland01.webjcl.com/"> iceland01.webjcl.com </a> </td>
-	      <td> New </td>
+	      <td> Dedicated 256mb Debian </td>
+	      <td>  
+		<div class="rw-ui-container rw-urid-2"></div> 
+	      </td>
+	    </tr>
+
+	    <tr>
+	      <td> <a href="http://aws01.webjcl.com"> aws01.webjcl.com </a> </td>
+	      <td> Dedicated 512mb Ubuntu </td>
+	      <td>
+		<div class="rw-ui-container rw-urid-4"></div>
+	      </td>
 	    </tr>
 	    <tr>
 	      <td> <a href="http://pub.webjcl.usetheboost.com/"> pub.webjcl.usetheboost.com </a> </td>
-	      <td> Intermittent </td>
-	    </tr>
-	    <tr>
-	      <td> <a href="http://aws01.webjcl.com"> aws01.webjcl.com </a> </td>
-	      <td> Broken? (SAVE YOUR WORK!) </td>
+	      <td> Shared, backup/development </td>
+	      <td> <div class="rw-ui-container rw-urid-3"></div> </td>
 	    </tr>
 	  </table>
+	  
+	  Want to run your own?  Please contact <a href="https://github.com/scvnc">Vince</a> to get your instance on this list.
 
         
         
         <hr/>
         
+        <h1> What is WebJCL? </h1>
         <p><img src="http://niumainframe.github.io/webjcl/images/webjcl-screenshot.png" alt="WebJCL Screenshot"></p>
 
         
@@ -276,6 +288,41 @@ npm install
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+<div class="rw-js-container">
+    <script type="text/javascript">
+        // Async Rating-Widget initialization.
+        function RW_Async_Init(){
+            RW.init({
+                uid: "75ACAF5CCC522C59EA31293B59812C6C",
+                huid: "134111",
+                options: {
+                    advanced: {
+                        text: {
+                            rateThis: "Rate this server"
+                        }
+                    },
+                    style: "oxygen"
+                }
+            });
+            RW.render();
+        }
+
+        // Append Rating-Widget JavaScript library.
+        if (typeof(RW) == "undefined"){
+            (function(){
+                var rw = document.createElement("script"),
+                    d = new Date(), ck = "Y" + d.getFullYear() + "M" + d.getMonth() + "D" + d.getDate();
+                rw.type = "text/javascript"; rw.async = true;
+                rw.src = "http://js.rating-widget.com/external.min.js?ck=" + ck;
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(rw, s);
+            })();
+        }
+
+    </script>
+</div>
+  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -286,6 +333,7 @@ npm install
   ga('send', 'pageview');
 
 </script>
+
   </body>
   
 </html>
