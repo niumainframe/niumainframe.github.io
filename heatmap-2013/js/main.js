@@ -35,10 +35,26 @@ common.range = 8;
 new CalHeatMap()
 	.init(common);
 
-
+// Fall Semester August 26th
 common.itemSelector = "#FA2013";
 common.start = new Date(2013, 7, 26);
 common.range = 16;
+
+new CalHeatMap()
+	.init(common);
+
+// Spring Semester December 13th
+common.itemSelector = "#SP2014";
+common.start = new Date(2014, 0, 13);
+common.range = 17;
+
+new CalHeatMap()
+	.init(common);
+
+// Summer Semester December 13th
+common.itemSelector = "#SU2014";
+common.start = new Date(2014, 5, 16);
+common.range = 8;
 
 new CalHeatMap()
 	.init(common);
